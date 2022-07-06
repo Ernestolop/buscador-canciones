@@ -18,6 +18,7 @@ const LetrasProvider = ({children}) => {
             const {data} = await axios(url);
             setLetra(data.lyrics);
         } catch (error) {
+            setLetra('')
             setNoEncontrado(true);
         }
         setCargando(false);
